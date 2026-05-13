@@ -1,0 +1,9 @@
+[mgr]
+prepend_keymap = [
+  # Quick directory jumps
+  { on = ["g", "r"], run = "cd ~/repos", desc = "Go to repos" },
+  { on = ["g", "p"], run = "cd ~/projects", desc = "Go to projects" },
+
+  # Open lazygit
+  { on = ["<C-g>"], run = "shell 'lazygit' --block", desc = "Open lazygit" },
+]

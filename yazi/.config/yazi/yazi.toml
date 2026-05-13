@@ -1,0 +1,18 @@
+[mgr]
+ratio        = [1, 4, 3]      # Pane width ratios [parent, current, preview]
+sort_by      = "natural"       # natural, mtime, extension, alphabetical, size
+sort_dir_first = true          # Directories listed before files
+show_hidden  = false           # Show dotfiles
+scrolloff    = 5               # Cursor padding from edge
+linemode     = "none"          # none, size, mtime, permissions, owner
+
+[preview]
+wrap       = "no"              # Line wrapping in preview
+tab_size   = 2                 # Tab width in preview
+max_width  = 600               # Max image preview width
+max_height = 900               # Max image preview height
+
+[opener]
+edit = [
+  { run = '${EDITOR:-vi} "$@"', block = true, desc = "Edit" },
+]
