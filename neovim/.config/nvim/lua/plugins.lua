@@ -1,24 +1,4 @@
 return {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  {
-    'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    build = ':TSUpdate'
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional, but recommended
-    },
-    lazy = false, -- neo-tree will lazily load itself
-  },
   {
     "mason-org/mason.nvim",
     opts = {
@@ -30,10 +10,6 @@ return {
             }
         }
     }
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
   },
   {
     "neovim/nvim-lspconfig",

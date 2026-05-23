@@ -1,9 +1,3 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.g.mapleader= " "
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -18,16 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
+require("settings")
 require("lazy").setup("plugins")
---require catppuccin
-require("catppuccin").setup()
-require('neo-tree').setup({})
---set the colorscheme to it!
-vim.cmd.colorscheme "catppuccin"
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
 
-require('nvim-treesitter').install { 'bash', 'dockerfile', 'go', 'python', 'ruby', 'terraform', 'yaml' }
